@@ -5,6 +5,7 @@ import requests
 from google import genai
 import datetime
 from gtts import gTTS
+from dotenv import load_dotenv
 import tempfile
 import threading
 import pygame
@@ -12,7 +13,10 @@ import time
 import sys
 import os
 
-newsapi = "YOUR_NEWS_API_KEY"
+load_dotenv()
+
+newsapi =  os.getenv("NEWS_API_KEY")
+
 
 def speak(text):
     fd, filename = tempfile.mkstemp(suffix=".mp3")
@@ -44,7 +48,7 @@ def speak_async(text):
     ).start()
 
 def aiprocess(command):
-    client = genai.Client(api_key="YOUR_API_KEY")
+    client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
     response = client.models.generate_content(
         model="gemini-2.5-flash",
@@ -53,7 +57,7 @@ def aiprocess(command):
 
     return response.text
 
-weather_api = "YOUR_WEATHER_API_KEY"
+weather_api = os.getenv("WEATHER_API_KEY")
 
 def get_weather(city):
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weather_api}&units=metric"
