@@ -50,7 +50,7 @@ It can:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/jarvis-ai.git
+git clone https://github.com/PooravMSharma/jarvis-ai-voice-assistant.git
 
 pip install -r requirements.txt
 
