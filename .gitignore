@@ -1,7 +1,7 @@
+venv/
 .venv/
 __pycache__/
 *.pyc
 *.mp3
 .env
 .vscode/
-venv/
