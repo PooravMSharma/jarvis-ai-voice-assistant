@@ -3,97 +3,273 @@
 ![Speech](https://img.shields.io/badge/Speech-Recognition-green)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
-# 🤖 Jarvis AI Voice Assistant
+# 🎙️ Jarvis AI Voice Assistant
 
-An AI-powered voice assistant built in Python that can perform system tasks, answer questions, control apps, fetch weather, news, and interact using speech recognition and AI (Gemini API).
+A voice-controlled AI assistant built with Python that can open applications, browse websites, answer questions using Google's Gemini AI, provide weather updates, read the latest news headlines, and execute multiple commands from a single voice request.
 
 ---
 
-## 📌 About The Project
+## 🚀 Features
 
-Jarvis is a Python-based voice assistant inspired by Alexa and Google Assistant.
+### 🎤 Voice Activation
 
-It can:
-- Recognize voice commands
-- Speak responses using TTS
-- Open websites and apps
-- Play music
-- Fetch live weather data
-- Show latest news
-- Answer AI questions using Google Gemini
-- Restart and shutdown system assistant
+* Wake word: **"Jarvis"**
+* Continuous listening mode
+* Speak the command directly:
 
-## ⚡ Features
+  * `Jarvis open Spotify`
+  * `Jarvis what is the weather in Delhi`
 
-- 🎤 Voice recognition (Speech-to-text)
-- 🔊 Text-to-speech response
-- 🌦 Live weather updates
-- 📰 Latest news headlines
-- 🌐 Open websites (Google, YouTube, Netflix, etc.)
-- 🎵 Music player integration
-- 🤖 AI chatbot (Gemini API)
-- ⏰ Time & Date assistant
-- 🔄 Restart & shutdown commands
-- 🧠 Natural conversation handling
+---
 
-## 🛠 Tech Stack
+### 🌐 Open Websites
 
-- Python 3
-- SpeechRecognition
-- gTTS (Google Text-to-Speech)
-- Pygame
-- Requests
-- Google Gemini API
-- OpenWeather API
+Jarvis can open popular websites such as:
 
-## 🚀 How to Run
+* Google
+* YouTube
+* GitHub
+* LinkedIn
+* Facebook
+* Hotstar
+* Netflix
 
-### 1. Clone the repository
+Example:
+
+```
+Jarvis open Google
+```
+
+---
+
+### 💻 Open & Close Applications (macOS)
+
+Supported applications:
+
+* Spotify
+* Terminal
+* Safari
+* Visual Studio Code
+* Calculator
+* WhatsApp
+* Discord
+* Finder
+
+Examples:
+
+```
+Jarvis open Spotify
+
+Jarvis close Spotify
+
+Jarvis open Terminal
+```
+
+Jarvis also checks whether an application is already running before opening it.
+
+---
+
+### 🌦 Weather Information
+
+Get the current weather for any city.
+
+Example:
+
+```
+Jarvis weather in Delhi
+```
+
+Response includes:
+
+* Temperature
+* Feels Like Temperature
+* Weather Description
+
+Powered by **OpenWeather API**.
+
+---
+
+### 📰 Daily News
+
+Jarvis reads the latest top headlines.
+
+Example:
+
+```
+Jarvis news
+```
+
+Powered by **NewsAPI**.
+
+---
+
+### 🤖 AI Assistant
+
+Unknown commands are automatically answered using **Google Gemini 2.5 Flash**.
+
+Examples:
+
+```
+Jarvis who is Virat Kohli
+
+Jarvis explain recursion
+
+Jarvis write a Python function for binary search
+```
+
+Responses are concise and conversational.
+
+---
+
+### 📅 Date & Time
+
+Examples:
+
+```
+Jarvis what is the time
+
+Jarvis what is today's date
+```
+
+---
+
+### ⚙️ System Commands
+
+Examples:
+
+```
+Jarvis stop
+
+Jarvis restart
+
+Jarvis shutdown
+```
+
+---
+
+### 🗣 Multiple Commands
+
+Jarvis can execute multiple commands in a single sentence.
+
+Examples:
+
+```
+Jarvis open Spotify and Terminal
+
+Jarvis open Google and YouTube
+
+Jarvis close Spotify and Calculator
+```
+
+---
+
+## 🛠 Technologies Used
+
+* Python
+* SpeechRecognition
+* Google Gemini API
+* gTTS
+* pygame
+* OpenWeather API
+* NewsAPI
+* python-dotenv
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
 ```bash
 git clone https://github.com/PooravMSharma/jarvis-ai-voice-assistant.git
+```
 
+Move into the project folder:
+
+```bash
+cd jarvis-ai-voice-assistant
+```
+
+Create a virtual environment:
+
+```bash
+python3 -m venv venv
+```
+
+Activate it:
+
+### macOS/Linux
+
+```bash
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
-
-python main.py
-
+```
 
 ---
 
-# 📦 8. REQUIREMENTS FILE
+## 🔑 Environment Variables
 
-Create `requirements.txt`:
+Create a `.env` file in the project root.
 
-```txt
-speechrecognition
-gtts
-pygame
-requests
-google-generativeai
-pyaudio
+```
+GEMINI_API_KEY=your_gemini_api_key
+
+WEATHER_API_KEY=your_openweather_api_key
+
+NEWS_API_KEY=your_newsapi_key
+```
+
+---
+
+## ▶️ Run
+
+```bash
+python main.py
+```
+
+---
 
 ## 📁 Project Structure
 
-jarvis-ai/
+```
+jarvis-ai-voice-assistant/
 │
 ├── main.py
 ├── musiclibrary.py
 ├── requirements.txt
+├── .env
+├── .gitignore
 ├── README.md
-├── assets/
-│ ├── jarvis.png
-│ ├── weather.png
-│ └── ai.png
+└── venv/ (ignored)
+```
 
+---
 
-## 🚀 Future Improvements
+## 🔮 Future Improvements
 
-- GUI interface (Tkinter / PyQt)
-- Wake word detection ("Hey Jarvis")
-- Offline AI model support
-- WhatsApp automation
-- Email sending
-- Memory system (remember user preferences)
+* Spotify playback control
+* Email support
+* Calendar & reminders
+* File management
+* Browser automation
+* Memory system
+* Smart AI command parsing
+* Local LLM support (Ollama)
+
+---
 
 ## 👨‍💻 Author
 
-Built with ❤️ by Poorav Sharma
+**Poorav Sharma**
+
+GitHub:
+https://github.com/PooravMSharma
+
+---
+
+⭐ If you found this project interesting, consider starring the repository.
