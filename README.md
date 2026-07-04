@@ -1,4 +1,4 @@
-![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
 ![AI](https://img.shields.io/badge/AI-Gemini%202.5-orange)
 ![Speech](https://img.shields.io/badge/Speech-Recognition-green)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
